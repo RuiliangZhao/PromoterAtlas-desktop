@@ -1,0 +1,20 @@
+[
+  {
+    "task": "annotation",
+    "elapsed_seconds_including_load": 2.0348179999855347,
+    "max_rss_bytes_process": 252936192,
+    "records": 3,
+    "windows": 45,
+    "device": "cpu",
+    "threads": 2
+  },
+  {
+    "task": "expression",
+    "elapsed_seconds_including_load": 0.09213725000154227,
+    "max_rss_bytes_process": 282361856,
+    "records": 2,
+    "windows": 0,
+    "device": "cpu",
+    "threads": 2
+  }
+]

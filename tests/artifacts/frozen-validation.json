@@ -1,0 +1,26 @@
+[
+  {
+    "task": "annotation",
+    "seconds": 1.3598299580044113,
+    "exit_code": 0,
+    "reference_match": true,
+    "worker": "src-tauri/target/release/bundle/macos/PromoterAtlas Desktop.app/Contents/Resources/resources/backend/promoter-atlas-worker",
+    "working_directory": "/private/tmp",
+    "path": "/usr/bin:/bin",
+    "network_denied": true
+  },
+  {
+    "task": "expression",
+    "seconds": 0.9370062499656342,
+    "exit_code": 0,
+    "reference_match": true,
+    "worker": "src-tauri/target/release/bundle/macos/PromoterAtlas Desktop.app/Contents/Resources/resources/backend/promoter-atlas-worker",
+    "working_directory": "/private/tmp",
+    "path": "/usr/bin:/bin",
+    "network_denied": true
+  },
+  {
+    "cancellation_reaped": true,
+    "rerun": true
+  }
+]

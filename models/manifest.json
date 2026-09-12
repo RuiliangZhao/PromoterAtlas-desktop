@@ -1,0 +1,132 @@
+{
+  "upstream": "https://github.com/LucasCoppens/PromoterAtlas",
+  "commit": "771d8c07bd5b9f97ada1c551371d5c11ef8d8655",
+  "weights": [
+    {
+      "file": "trained_weights/base_model/promoteratlas-base.pt",
+      "sha256": "bb413bc8602f05b6903ee06da9cebecb461990aebfa129c62bb3cb56cd7bf624",
+      "bytes": 22313814,
+      "keys": [
+        "epoch",
+        "model_state_dict",
+        "optimizer_state_dict",
+        "val_loss",
+        "config"
+      ],
+      "fc1_shape": null,
+      "normalization_params": null
+    },
+    {
+      "file": "trained_weights/expression_prediction/promoteratlas-trspred-hossain2020.pt",
+      "sha256": "31af6913670eb25066c4a3d9aff21832da26c2a6e57f2067ed36e167fdcfba11",
+      "bytes": 11310034,
+      "keys": [
+        "model_state_dict",
+        "val_loss",
+        "normalization_params"
+      ],
+      "fc1_shape": [
+        64,
+        11008
+      ],
+      "normalization_params": {
+        "mean": -6.497496076558214,
+        "std": 1.7971079650996693
+      }
+    },
+    {
+      "file": "trained_weights/expression_prediction/promoteratlas-trspred-lafleur2022.pt",
+      "sha256": "cbd8c226c753f54b63c0bfc9470e87422958133129ca04a20e9ffdbf85e179be",
+      "bytes": 11310034,
+      "keys": [
+        "model_state_dict",
+        "val_loss",
+        "normalization_params"
+      ],
+      "fc1_shape": [
+        64,
+        11008
+      ],
+      "normalization_params": {
+        "mean": -2.6186564410911406,
+        "std": 0.7572823396263633
+      }
+    },
+    {
+      "file": "trained_weights/expression_prediction/promoteratlas-trspred-urtecho2018.pt",
+      "sha256": "65d9182631d85fbb0de5d1512a0ad0c39386b1652a473c318a6525bbc91bbd8c",
+      "bytes": 11310034,
+      "keys": [
+        "model_state_dict",
+        "val_loss",
+        "normalization_params"
+      ],
+      "fc1_shape": [
+        64,
+        11008
+      ],
+      "normalization_params": {
+        "mean": -1.9113091955612622,
+        "std": 1.3785508810953426
+      }
+    },
+    {
+      "file": "trained_weights/expression_prediction/promoteratlas-trspred-yu2021.pt",
+      "sha256": "b4b9f5420c98ad56e67486b1fcac874bd85c2bd4b16533564a293ff44ceaa934",
+      "bytes": 11309354,
+      "keys": [
+        "model_state_dict",
+        "val_loss",
+        "normalization_params"
+      ],
+      "fc1_shape": [
+        64,
+        11008
+      ],
+      "normalization_params": {
+        "mean": -2.5776072614528536,
+        "std": 1.0655762273050722
+      }
+    },
+    {
+      "file": "trained_weights/expression_prediction/promoteratlas-tslpred-kosuri2013.pt",
+      "sha256": "d91213184696fd1ca6f4275c9dc1a927223f52c0c9af543bf6aa1ace8490e716",
+      "bytes": 11309690,
+      "keys": [
+        "model_state_dict",
+        "val_loss",
+        "normalization_params"
+      ],
+      "fc1_shape": [
+        64,
+        11008
+      ],
+      "normalization_params": {
+        "mean": 8.036709855804032,
+        "std": 1.1801895700816036,
+        "log_transform": true
+      }
+    },
+    {
+      "file": "trained_weights/segmentation/promoteratlas-annotation.pt",
+      "sha256": "4a35073fac78f5fad430698490bdeb614c1202e31ee600a3e6fa1c153d756ca7",
+      "bytes": 8813208,
+      "keys": [
+        "base_model.embedding.weight",
+        "base_model.embedding.bias",
+        "base_model.blocks.0.res_block.conv1.weight",
+        "base_model.blocks.0.res_block.conv1.bias",
+        "base_model.blocks.0.res_block.conv2.weight",
+        "base_model.blocks.0.res_block.conv2.bias",
+        "base_model.blocks.0.rotary_attention_block.to_qkv.weight",
+        "base_model.blocks.0.rotary_attention_block.to_qkv.bias",
+        "base_model.blocks.0.rotary_attention_block.to_out.weight",
+        "base_model.blocks.0.rotary_attention_block.to_out.bias",
+        "base_model.blocks.0.rotary_attention_block.norm.weight",
+        "base_model.blocks.0.rotary_attention_block.norm.bias"
+      ],
+      "fc1_shape": null,
+      "normalization_params": null
+    }
+  ]
+}

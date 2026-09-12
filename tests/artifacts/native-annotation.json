@@ -1,0 +1,797 @@
+{
+  "format": "promoter-atlas-analysis",
+  "version": 1,
+  "app_version": "0.1.0",
+  "name": "PromoterAtlas analysis",
+  "input": ">ecoli_200\nTAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGG\n>ecoli_230\nTAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGTAACGAGGTA\n>ecoli_1000\nTAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGTAACGAGGTAACAACCATGCGAGTGTTGAAGTTCGGCGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCTGGAAAGCAATGCCAGGCAGGGGCAGGTGGCCACCGTCCTCTCTGCCCCCGCCAAAATCACCAACCACCTGGTGGCGATGATTGAAAAAACCATTAGCGGCCAGGATGCTTTACCCAATATCAGCGATGCCGAACGTATTTTTGCCGAACTTTTGACGGGACTCGCCGCCGCCCAGCCGGGGTTCCCGCTGGCGCAATTGAAAACTTTCGTCGATCAGGAATTTGCCCAAATAAAACATGTCCTGCATGGCATTAGTTTGTTGGGGCAGTGCCCGGATAGCATCAACGCTGCGCTGATTTGCCGTGGCGAGAAAATGTCGATCGCCATTATGGCCGGCGTATTAGAAGCGCGCGGTCACAACGTTACTGTTATCGATCCGGTCGAAAAACTGCTGGCAGTGGGGCATTACCTCGAATCTACCGTCGATATTGCTGAGTCCACCCGCCGTATTGCGGCAAGCCGCATTCCGGCTGATCACATGGTGCTGATGGCAGGTTTCACCGCCGGTAATGAAAAAGGCGAACTGGTGGTGCTTGGACGCAACGGTTCCGACTACTCTGCTGCGGTGCTGGCTGCCTGTTTACGCGCCGATTGTTGCGAGATTTGGACGGACGTTGACGGGGTCTATACCTGCGACCCGCGTCAGGTGCCCGATGCGAGGTTGTTGAAGTCGATGTCCTACCAGGAAGCGAT\n",
+  "task": "annotation",
+  "parameters": {
+    "model": "lafleur2022",
+    "step": 20,
+    "minimum": 3,
+    "merge": false,
+    "cooccurrence": true
+  },
+  "result": {
+    "annotations": [
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_200",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_230",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_230",
+        "window_end": 220,
+        "window_start": 20
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 221,
+            "abs_start": 218,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_230",
+        "window_end": 230,
+        "window_start": 30
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 220,
+        "window_start": 20
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 229,
+            "abs_start": 225,
+            "end": 189,
+            "label": 1,
+            "start": 185,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 240,
+        "window_start": 40
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 251,
+            "abs_start": 248,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 260,
+        "window_start": 60
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 271,
+            "abs_start": 267,
+            "end": 191,
+            "label": 1,
+            "start": 187,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 280,
+        "window_start": 80
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 300,
+        "window_start": 100
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 311,
+            "abs_start": 308,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 320,
+        "window_start": 120
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 340,
+        "window_start": 140
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 360,
+        "window_start": 160
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 227,
+            "abs_start": 224,
+            "end": 47,
+            "label": 1,
+            "start": 44,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 380,
+        "window_start": 180
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 400,
+        "window_start": 200
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 420,
+        "window_start": 220
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 440,
+        "window_start": 240
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 460,
+        "window_start": 260
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 480,
+        "window_start": 280
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 500,
+        "window_start": 300
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 520,
+        "window_start": 320
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 540,
+        "window_start": 340
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 560,
+        "window_start": 360
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 580,
+        "window_start": 380
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 600,
+        "window_start": 400
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 620,
+        "window_start": 420
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 640,
+        "window_start": 440
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 660,
+        "window_start": 460
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 680,
+        "window_start": 480
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 700,
+        "window_start": 500
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 720,
+        "window_start": 520
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 740,
+        "window_start": 540
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 760,
+        "window_start": 560
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 780,
+        "window_start": 580
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 800,
+        "window_start": 600
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 820,
+        "window_start": 620
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 840,
+        "window_start": 640
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 860,
+        "window_start": 660
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 880,
+        "window_start": 680
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 900,
+        "window_start": 700
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 920,
+        "window_start": 720
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 940,
+        "window_start": 740
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 960,
+        "window_start": 760
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 980,
+        "window_start": 780
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 995,
+            "abs_start": 990,
+            "end": 195,
+            "label": 1,
+            "start": 190,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 1000,
+        "window_start": 800
+      }
+    ],
+    "coordinate_system": "0-based half-open",
+    "coverage": [
+      {
+        "end": 200,
+        "seq_id": "ecoli_200",
+        "start": 0
+      },
+      {
+        "end": 230,
+        "seq_id": "ecoli_230",
+        "start": 0
+      },
+      {
+        "end": 1000,
+        "seq_id": "ecoli_1000",
+        "start": 0
+      }
+    ],
+    "device": "cpu",
+    "elapsed_seconds": 1.8634912500274368,
+    "model": {
+      "commit": "771d8c07bd5b9f97ada1c551371d5c11ef8d8655",
+      "file": "trained_weights/segmentation/promoteratlas-annotation.pt",
+      "id": "annotation",
+      "normalization_params": null,
+      "sha256": "4a35073fac78f5fad430698490bdeb614c1202e31ee600a3e6fa1c153d756ca7"
+    },
+    "parameters": {
+      "cooccurrence": true,
+      "merge": false,
+      "minimum": 3,
+      "model": "lafleur2022",
+      "step": 20
+    },
+    "preprocessing": "Uppercase ACGTN; N encodes as all-zero vector; no padding/trimming",
+    "records": [
+      {
+        "id": "ecoli_200",
+        "sequence": "TAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGG",
+        "sha256": "6df31dc56ef280de8b8da4793ab5269819a12e9ad168048f31c5b0cfa974fcbf"
+      },
+      {
+        "id": "ecoli_230",
+        "sequence": "TAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGTAACGAGGTA",
+        "sha256": "724d74053b3540aa87725c80634f1eb9bd22e5693a637152226710dd27487212"
+      },
+      {
+        "id": "ecoli_1000",
+        "sequence": "TAAAATTTTATTGACTTAGGTCACTAAATACTTTAACCAATATAGGCATAGCGCACAGACAGATAAAAATTACAGAGTACACAACATCCATGAAACGCATTAGCACCACCATTACCACCACCATCACCATTACCACAGGTAACGGTGCGGGCTGACGCGTACAGGAAACACAGAAAAAAGCCCGCACCTGACAGTGCGGGCTTTTTTTTTCGACCAAAGGTAACGAGGTAACAACCATGCGAGTGTTGAAGTTCGGCGGTACATCAGTGGCAAATGCAGAACGTTTTCTGCGTGTTGCCGATATTCTGGAAAGCAATGCCAGGCAGGGGCAGGTGGCCACCGTCCTCTCTGCCCCCGCCAAAATCACCAACCACCTGGTGGCGATGATTGAAAAAACCATTAGCGGCCAGGATGCTTTACCCAATATCAGCGATGCCGAACGTATTTTTGCCGAACTTTTGACGGGACTCGCCGCCGCCCAGCCGGGGTTCCCGCTGGCGCAATTGAAAACTTTCGTCGATCAGGAATTTGCCCAAATAAAACATGTCCTGCATGGCATTAGTTTGTTGGGGCAGTGCCCGGATAGCATCAACGCTGCGCTGATTTGCCGTGGCGAGAAAATGTCGATCGCCATTATGGCCGGCGTATTAGAAGCGCGCGGTCACAACGTTACTGTTATCGATCCGGTCGAAAAACTGCTGGCAGTGGGGCATTACCTCGAATCTACCGTCGATATTGCTGAGTCCACCCGCCGTATTGCGGCAAGCCGCATTCCGGCTGATCACATGGTGCTGATGGCAGGTTTCACCGCCGGTAATGAAAAAGGCGAACTGGTGGTGCTTGGACGCAACGGTTCCGACTACTCTGCTGCGGTGCTGGCTGCCTGTTTACGCGCCGATTGTTGCGAGATTTGGACGGACGTTGACGGGGTCTATACCTGCGACCCGCGTCAGGTGCCCGATGCGAGGTTGTTGAAGTCGATGTCCTACCAGGAAGCGAT",
+        "sha256": "93548e4f009dffd615c02a0681e8310702dc57c53c6147dacc7022e819e38525"
+      }
+    ],
+    "scores": "Upstream argmax over 12 logits; labels only, not probabilities",
+    "strand": "input direction only",
+    "task": "annotation",
+    "torch": "2.14.0",
+    "windows": [
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_200",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_230",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_230",
+        "window_end": 220,
+        "window_start": 20
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 221,
+            "abs_start": 218,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_230",
+        "window_end": 230,
+        "window_start": 30
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 77,
+            "abs_start": 73,
+            "end": 77,
+            "label": 1,
+            "start": 73,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 200,
+        "window_start": 0
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 220,
+        "window_start": 20
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 229,
+            "abs_start": 225,
+            "end": 189,
+            "label": 1,
+            "start": 185,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 240,
+        "window_start": 40
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 251,
+            "abs_start": 248,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 260,
+        "window_start": 60
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 271,
+            "abs_start": 267,
+            "end": 191,
+            "label": 1,
+            "start": 187,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 280,
+        "window_start": 80
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 300,
+        "window_start": 100
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 311,
+            "abs_start": 308,
+            "end": 191,
+            "label": 1,
+            "start": 188,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 320,
+        "window_start": 120
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 340,
+        "window_start": 140
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 360,
+        "window_start": 160
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 227,
+            "abs_start": 224,
+            "end": 47,
+            "label": 1,
+            "start": 44,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 380,
+        "window_start": 180
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 400,
+        "window_start": 200
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 420,
+        "window_start": 220
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 440,
+        "window_start": 240
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 460,
+        "window_start": 260
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 480,
+        "window_start": 280
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 500,
+        "window_start": 300
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 520,
+        "window_start": 320
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 540,
+        "window_start": 340
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 560,
+        "window_start": 360
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 580,
+        "window_start": 380
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 600,
+        "window_start": 400
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 620,
+        "window_start": 420
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 640,
+        "window_start": 440
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 660,
+        "window_start": 460
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 680,
+        "window_start": 480
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 700,
+        "window_start": 500
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 720,
+        "window_start": 520
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 740,
+        "window_start": 540
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 760,
+        "window_start": 560
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 780,
+        "window_start": 580
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 800,
+        "window_start": 600
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 820,
+        "window_start": 620
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 840,
+        "window_start": 640
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 860,
+        "window_start": 660
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 880,
+        "window_start": 680
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 900,
+        "window_start": 700
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 920,
+        "window_start": 720
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 940,
+        "window_start": 740
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 960,
+        "window_start": 760
+      },
+      {
+        "elements": [],
+        "seq_id": "ecoli_1000",
+        "window_end": 980,
+        "window_start": 780
+      },
+      {
+        "elements": [
+          {
+            "abs_end": 995,
+            "abs_start": 990,
+            "end": 195,
+            "label": 1,
+            "start": 190,
+            "type": "RBS"
+          }
+        ],
+        "seq_id": "ecoli_1000",
+        "window_end": 1000,
+        "window_start": 800
+      }
+    ]
+  }
+}

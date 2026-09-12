@@ -1,0 +1,77 @@
+[
+  {
+    "model": "lafleur2022",
+    "values": [
+      {
+        "sequence_id": "ecoli_86_a",
+        "value": -2.696194648742676
+      },
+      {
+        "sequence_id": "ecoli_86_b",
+        "value": -2.143416166305542
+      }
+    ],
+    "maximum_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "model": "hossain2020",
+    "values": [
+      {
+        "sequence_id": "ecoli_86_a",
+        "value": -6.149324417114258
+      },
+      {
+        "sequence_id": "ecoli_86_b",
+        "value": -4.047939300537109
+      }
+    ],
+    "maximum_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "model": "urtecho2018",
+    "values": [
+      {
+        "sequence_id": "ecoli_86_a",
+        "value": -0.6379572153091431
+      },
+      {
+        "sequence_id": "ecoli_86_b",
+        "value": -1.1185927391052246
+      }
+    ],
+    "maximum_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "model": "yu2021",
+    "values": [
+      {
+        "sequence_id": "ecoli_86_a",
+        "value": -1.8745522499084473
+      },
+      {
+        "sequence_id": "ecoli_86_b",
+        "value": -2.3637256622314453
+      }
+    ],
+    "maximum_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "model": "kosuri2013",
+    "values": [
+      {
+        "sequence_id": "ecoli_86_a",
+        "value": 1301.735595703125
+      },
+      {
+        "sequence_id": "ecoli_86_b",
+        "value": 3220.9609375
+      }
+    ],
+    "maximum_absolute_error": 0.0,
+    "passed": true
+  }
+]

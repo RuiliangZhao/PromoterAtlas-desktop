@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "PromoterAtlas Desktop",
+  "version": "0.7.1",
+  "identifier": "org.promoteratlas.desktop",
+  "build": {
+    "beforeDevCommand": "node node_modules/vite/bin/vite.js --host 127.0.0.1",
+    "devUrl": "http://127.0.0.1:5173",
+    "beforeBuildCommand": "node node_modules/typescript/bin/tsc && node node_modules/vite/bin/vite.js build",
+    "frontendDist": "../dist-web"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "PromoterAtlas Desktop",
+        "width": 1280,
+        "height": 860,
+        "minWidth": 960,
+        "minHeight": 660
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app"
+    ],
+    "resources": {
+      "resources/backend/": "resources/backend/",
+      "../licenses/": "licenses/"
+    },
+    "macOS": {
+      "minimumSystemVersion": "14.0",
+      "signingIdentity": "-",
+      "entitlements": "../backend/entitlements.plist"
+    },
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

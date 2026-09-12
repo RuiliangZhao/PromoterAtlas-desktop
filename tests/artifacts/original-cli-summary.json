@@ -1,0 +1,34 @@
+[
+  {
+    "task": "annotation",
+    "exit_code": 0,
+    "wall_seconds": 6.40843125001993,
+    "command": [
+      "scripts/annotate.py",
+      "--input",
+      "tests/fixtures/annotation.fasta",
+      "--output",
+      "tests/artifacts/reference-annotation.json",
+      "--output-format",
+      "json",
+      "--device",
+      "cpu"
+    ]
+  },
+  {
+    "task": "expression",
+    "exit_code": 1,
+    "wall_seconds": 16.796541457995772,
+    "command": [
+      "scripts/predict_expression.py",
+      "--input",
+      "tests/fixtures/expression.fasta",
+      "--output",
+      "tests/artifacts/reference-expression.json",
+      "--format",
+      "json",
+      "--model-path",
+      "trained_weights/expression_prediction/promoteratlas-trspred-lafleur2022.pt"
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+name: Build desktop packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            name: macOS-arm64
+            bundles: app
+            worker: src-tauri/resources/backend/promoter-atlas-worker
+          - os: windows-latest
+            name: Windows-x64
+            bundles: nsis
+            worker: src-tauri/resources/backend/promoter-atlas-worker.exe
+
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: backend/requirements.lock
+
+      - name: Download pinned upstream model weights
+        run: |
+          upstream_commit="$(python -c "import json; print(json.load(open('models/manifest.json'))['commit'])")"
+          upstream_dir="$RUNNER_TEMP/promoter-atlas-upstream"
+          git init "$upstream_dir"
+          git -C "$upstream_dir" remote add origin https://github.com/LucasCoppens/PromoterAtlas.git
+          git -C "$upstream_dir" fetch --depth 1 origin "$upstream_commit"
+          git -C "$upstream_dir" checkout FETCH_HEAD -- trained_weights
+          mkdir -p vendor/PromoterAtlas/trained_weights
+          cp -R "$upstream_dir/trained_weights/." vendor/PromoterAtlas/trained_weights/
+
+      - name: Install Python dependencies
+        run: python -m pip install -r backend/requirements.lock
+
+      - name: Verify weights and backend tests
+        run: |
+          python scripts/verify-weights.py
+          python -m pytest backend/tests -q
+
+      - name: Build frozen Python backend
+        env:
+          PYINSTALLER_CONFIG_DIR: ${{ github.workspace }}/.cache/pyinstaller
+          MPLCONFIGDIR: ${{ github.workspace }}/.cache/matplotlib
+        run: |
+          python -m PyInstaller --noconfirm \
+            --distpath src-tauri/resources \
+            --workpath build/pyinstaller \
+            backend/backend.spec
+
+      - name: Verify frozen Python backend
+        run: python scripts/verify-frozen.py "${{ matrix.worker }}"
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Install frontend dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Test frontend
+        run: pnpm test
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri -> target
+
+      - name: Test Rust bridge
+        run: cargo test --manifest-path src-tauri/Cargo.toml
+
+      - name: Build Tauri package
+        run: pnpm tauri build --bundles ${{ matrix.bundles }}
+
+      - name: Collect macOS package
+        if: runner.os == 'macOS'
+        run: |
+          version="$(node -p "require('./src-tauri/tauri.conf.json').version")"
+          mkdir -p dist
+          ditto -c -k --sequesterRsrc --keepParent \
+            'src-tauri/target/release/bundle/macos/PromoterAtlas Desktop.app' \
+            "dist/PromoterAtlas-Desktop-${version}-macOS-arm64.zip"
+
+      - name: Collect Windows installer
+        if: runner.os == 'Windows'
+        run: |
+          version="$(node -p "require('./src-tauri/tauri.conf.json').version")"
+          mkdir -p dist
+          installer="$(find src-tauri/target/release/bundle/nsis -maxdepth 1 -name '*.exe' -print -quit)"
+          test -n "$installer"
+          cp "$installer" "dist/PromoterAtlas-Desktop-${version}-Windows-x64-setup.exe"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: PromoterAtlas-Desktop-${{ matrix.name }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    name: Publish tagged release
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all platform packages
+        uses: actions/download-artifact@v8
+        with:
+          pattern: PromoterAtlas-Desktop-*
+          path: dist
+          merge-multiple: true
+
+      - name: Create release and upload packages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view "${{ github.ref_name }}" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+            gh release create "${{ github.ref_name }}" --repo "$GITHUB_REPOSITORY" --verify-tag --generate-notes --title "PromoterAtlas Desktop ${{ github.ref_name }}"
+          gh release upload "${{ github.ref_name }}" dist/* --repo "$GITHUB_REPOSITORY" --clobber

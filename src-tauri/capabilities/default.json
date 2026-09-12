@@ -1,0 +1,1 @@
+{"identifier":"main","description":"Local analysis events; no shell or filesystem access from JavaScript","windows":["main"],"permissions":["core:default"]}

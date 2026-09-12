@@ -1,0 +1,362 @@
+[
+  {
+    "seq_id": "ecoli_200",
+    "window_start": 0,
+    "window_end": 200,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 73,
+        "end": 77,
+        "abs_start": 73,
+        "abs_end": 77
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_230",
+    "window_start": 0,
+    "window_end": 200,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 73,
+        "end": 77,
+        "abs_start": 73,
+        "abs_end": 77
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_230",
+    "window_start": 20,
+    "window_end": 220,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_230",
+    "window_start": 30,
+    "window_end": 230,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 188,
+        "end": 191,
+        "abs_start": 218,
+        "abs_end": 221
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 0,
+    "window_end": 200,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 73,
+        "end": 77,
+        "abs_start": 73,
+        "abs_end": 77
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 20,
+    "window_end": 220,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 40,
+    "window_end": 240,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 185,
+        "end": 189,
+        "abs_start": 225,
+        "abs_end": 229
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 60,
+    "window_end": 260,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 188,
+        "end": 191,
+        "abs_start": 248,
+        "abs_end": 251
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 80,
+    "window_end": 280,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 187,
+        "end": 191,
+        "abs_start": 267,
+        "abs_end": 271
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 100,
+    "window_end": 300,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 120,
+    "window_end": 320,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 188,
+        "end": 191,
+        "abs_start": 308,
+        "abs_end": 311
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 140,
+    "window_end": 340,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 160,
+    "window_end": 360,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 180,
+    "window_end": 380,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 44,
+        "end": 47,
+        "abs_start": 224,
+        "abs_end": 227
+      }
+    ]
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 200,
+    "window_end": 400,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 220,
+    "window_end": 420,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 240,
+    "window_end": 440,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 260,
+    "window_end": 460,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 280,
+    "window_end": 480,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 300,
+    "window_end": 500,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 320,
+    "window_end": 520,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 340,
+    "window_end": 540,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 360,
+    "window_end": 560,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 380,
+    "window_end": 580,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 400,
+    "window_end": 600,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 420,
+    "window_end": 620,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 440,
+    "window_end": 640,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 460,
+    "window_end": 660,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 480,
+    "window_end": 680,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 500,
+    "window_end": 700,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 520,
+    "window_end": 720,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 540,
+    "window_end": 740,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 560,
+    "window_end": 760,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 580,
+    "window_end": 780,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 600,
+    "window_end": 800,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 620,
+    "window_end": 820,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 640,
+    "window_end": 840,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 660,
+    "window_end": 860,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 680,
+    "window_end": 880,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 700,
+    "window_end": 900,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 720,
+    "window_end": 920,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 740,
+    "window_end": 940,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 760,
+    "window_end": 960,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 780,
+    "window_end": 980,
+    "elements": []
+  },
+  {
+    "seq_id": "ecoli_1000",
+    "window_start": 800,
+    "window_end": 1000,
+    "elements": [
+      {
+        "type": "RBS",
+        "label": 1,
+        "start": 190,
+        "end": 195,
+        "abs_start": 990,
+        "abs_end": 995
+      }
+    ]
+  }
+]
